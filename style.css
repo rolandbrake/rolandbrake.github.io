@@ -1,0 +1,132 @@
+:root {
+  --bg-light: #f4f4f4;
+  --text-light: #222;
+  --bg-dark: #1b1b1b;
+  --text-dark: #f4f4f4;
+  --accent: #0077ff;
+  /* border color for light theme */
+  --border-color: #0e0e0e; /* subtle blue tint */
+}
+
+body.dark {
+  --border-color: #fafafa; /* brighter border for dark mode */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 5vh auto;
+  padding: 20px 40px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.left,
+.right {
+  padding: 20px;
+  flex: 1 1 300px;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 350px;
+  /* border-radius: 12px; */
+  object-fit: cover;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+  border: 2px solid var(--border-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+h1 {
+  font-size: 2.3em;
+  margin-bottom: 0.4em;
+}
+
+.bio {
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin-right: 15px;
+  display: inline-block;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-links a:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  filter: invert(0);
+}
+
+body.dark .social-links img {
+  filter: invert(1);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  margin-top: 30px;
+  border: none;
+  background: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+.highlight-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.highlight-link:hover {
+  border-color: var(--accent);
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 300px;
+  }
+
+  .bio {
+    margin: 0 auto;
+  }
+}
