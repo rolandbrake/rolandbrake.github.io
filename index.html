@@ -1,57 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roland Brake</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <div class="left">
-      <img src="assets/profile.jpg" alt="Roland Brake" class="profile-pic" />
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roland Brake - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <span class="nav-logo">rb<span class="dim">();</span></span>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle theme">◐</button>
+    </nav>
 
-    <div class="right">
-      <h1>Roland Brake</h1>
+    <!-- HERO -->
+    <section id="about">
+      <div class="hero-grid">
+        <!-- Left: profile -->
+        <div class="profile-col">
+          <div class="profile-frame">
+            <img
+              src="assets/profile.jpg"
+              alt="Roland Brake"
+              class="profile-pic"
+            />
+          </div>
+          <div class="social-links">
+            <a
+              href="https://github.com/rolandbrake"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <img src="assets/github.svg" alt="GitHub" />
+            </a>
+            <a
+              href="https://linkedin.com/in/rolandbrake"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <img src="assets/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="mailto:rolandbrake@hotmail.com" aria-label="Email">
+              <img src="assets/email.svg" alt="Email" />
+            </a>
+            <a
+              href="https://wa.me/+9647510391065"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <img src="assets/whatsapp.svg" alt="WhatsApp" />
+            </a>
+          </div>
+        </div>
 
-      <p class="bio">
-        I’m a <strong>Software Engineer</strong> with a degree in <strong>Computer Science</strong>,
-        specializing in <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>.
-        My passion lies in creating efficient systems — from low-level performance-critical code to modern web applications.
-      </p>
+        <!-- Right: intro -->
+        <div class="intro-col">
+          <div class="eyebrow">// available for remote &amp; on-site roles</div>
+          <h1>Roland<br />Brake</h1>
+          <div class="hero-title">Software Engineer &amp; Programmer</div>
+          <p class="bio">
+            I build software across the full stack - from
+            <strong>web applications and SPAs</strong> to
+            <strong
+              >programming languages, virtual machines, and numerical
+              runtimes</strong
+            >. I care about writing code that's fast, readable, and purposeful.
+          </p>
+          <p class="bio">
+            I'm the author of
+            <a href="https://pilang.netlify.app/" target="_blank" class="hl"
+              >Pilang</a
+            >, a programming language for scientific computing and data
+            visualisation, and
+            <a href="https://piscript.netlify.app/" target="_blank" class="hl"
+              >Pi-Script</a
+            >, a scripting language for games and interactive graphics built on
+            a fantasy-console runtime.
+          </p>
 
-      <p class="bio">
-        I’m the creator of my own programming languages, 
-        <a href="https://piscript.netlify.app/" target="_blank" class="highlight-link">Piscript</a>
-        and <a href="https://pi-lang.netlify.app/" target="_blank" class="highlight-link">Pilang</a>,
-        compact and expressive languages designed for creativity, experimentation, and education.
-      </p>
+          <!-- Terminal snippet -->
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-label">pilang - repl</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <div id="typed-output"></div>
+              <span class="cursor"></span>
+            </div>
+          </div>
 
-      <p class="bio">
-        On the practical side, I’ve built web interfaces using 
-        <strong>JavaScript</strong> and <strong>React</strong>, 
-        and developed core logic and tools in <strong>C</strong>, <strong>Python</strong>, and <strong>Java</strong> — 
-        with <strong>Java</strong> and <strong>C</strong> being the main languages used to implement Piscript and Pilang.
-      </p>
-
-      <div class="social-links">
-        <a href="https://github.com/rolandbrake" target="_blank" aria-label="GitHub">
-          <img src="assets/github.svg" alt="GitHub" />
-        </a>
-        <a href="https://linkedin.com/in/rolandbrake" target="_blank" aria-label="LinkedIn">
-          <img src="assets/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="mailto:roland.brake@hotmail.com" aria-label="Email">
-          <img src="assets/email.svg" alt="Email" />
-        </a>
-        <a href="https://wa.me/+9647510391065" target="_blank" aria-label="WhatsApp">
-          <img src="assets/whatsapp.svg" alt="WhatsApp" />
-        </a>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-inner">
+        <div class="eyebrow">// 02 - projects</div>
+        <h2 class="section-heading">What I've Built</h2>
+        <div class="accent-line"></div>
+
+        <div class="projects-grid">
+          <!-- PILANG featured -->
+          <div class="project-card featured">
+            <div class="project-main">
+              <div class="project-tag">
+                Programming Language · C · 2022–Present
+              </div>
+              <div class="project-name">Pilang</div>
+
+              <p class="project-desc">
+                A lightweight programming language for machine learning,
+                numerical computing, data processing, and visualisation.
+                Combines Python-like readability with JavaScript-like
+                flexibility, small enough to embed directly into applications.
+                Built around a bytecode VM written in C with native support for
+                tensors, plotting, statistics, and OOP - data-oriented
+                programming is a first-class concern, not an afterthought.
+              </p>
+              <ul class="project-bullets">
+                <li>
+                  Native tensor operations, statistics, 3D visualisation, and ML
+                  workflows - no external ecosystem required
+                </li>
+                <li>
+                  Bytecode VM with computed-goto dispatch and call-site inline
+                  caches for fast execution
+                </li>
+                <li>
+                  Syntax inspired by Python and JavaScript: comprehensions,
+                  closures, classes, operator overloading, ranges, slices,
+                  tuples
+                </li>
+                <li>
+                  Targets scientific computing, simulation, education, and
+                  interactive data exploration
+                </li>
+                <li>
+                  Standard library: math, io, fs, tensor, canvas, net, stats,
+                  random, plot
+                </li>
+              </ul>
+              <div class="project-tech">
+                <span class="pill">C</span><span class="pill">Bytecode VM</span
+                ><span class="pill">Tensors</span>
+                <span class="pill">Data Visualisation</span
+                ><span class="pill">ML</span><span class="pill">WASM</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://pilang.netlify.app/"
+                  target="_blank"
+                  class="plink"
+                  >↗ Live Demo</a
+                >
+                <a
+                  href="https://github.com/rolandbrake"
+                  target="_blank"
+                  class="plink"
+                  >↗ GitHub</a
+                >
+              </div>
+            </div>
+
+            <!-- Right side: coin + code -->
+            <div class="project-right">
+              <img src="assets/pi.png" alt="Pilang logo" class="pilang-logo" />
+              <div class="project-code">
+                <pre><span class="t-cmt">// plotting in a few lines</span>
+<span class="t-kw">import</span> math, plot, draw
+
+<span class="t-kw">let</span> x = math.linspace(<span class="t-num">0</span>, <span class="t-num">2</span> * math.PI, <span class="t-num">100</span>)
+<span class="t-kw">let</span> y = math.sin(x)
+
+<span class="t-kw">let</span> ctx   = draw.canvas(<span class="t-num">520</span>, <span class="t-num">480</span>, <span class="t-str">"PiLang - plot + draw demo"</span>)
+<span class="t-kw">let</span> chart = plot.chart(ctx)
+
+plot.line(chart, x, y, <span class="t-str">"#4a9fe8"</span>)
+plot.title(chart, <span class="t-str">"Draw line"</span>)
+plot.show(chart)
+draw.run(ctx)
+
+<span class="t-cmt">// classes with typed field access</span>
+<span class="t-kw">class</span> <span class="t-fn">Dataset</span> {
+  <span class="t-fn">constructor</span>(data) { <span class="t-kw">this</span>.data = data }
+  <span class="t-fn">mean_</span>() { <span class="t-kw">return</span> <span class="t-fn">mean</span>(<span class="t-kw">this</span>.data) }
+  <span class="t-fn">std_</span>()  { <span class="t-kw">return</span> <span class="t-fn">std</span>(<span class="t-kw">this</span>.data)  }
+}</pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- PI-SCRIPT -->
+          <div class="project-card">
+            <div class="project-tag">
+              Scripting Language · Games &amp; Graphics
+            </div>
+            <div class="project-name">Pi-Script</div>
+            <div class="carousel">
+              <div class="carousel-track">
+                <img src="assets/example1.gif" alt="Pi-Script example 1" />
+                <img src="assets/example2.gif" alt="Pi-Script example 2" />
+                <img src="assets/example3.gif" alt="Pi-Script example 3" />                
+              </div>
+              <div class="carousel-dots">
+                <span class="carousel-dot active"></span>
+                <span class="carousel-dot"></span>
+                <span class="carousel-dot"></span>                
+              </div>
+            </div>
+            <p class="project-desc">
+              A lightweight scripting language and SDL runtime for building
+              small games, graphics experiments, and interactive tools. Runs
+              inside a fantasy-console-style 128×128 framebuffer environment
+              while still letting projects load normal media files alongside
+              their scripts.
+            </p>
+            <div class="project-tech">
+              <span class="pill">C</span><span class="pill">SDL2</span>
+              <span class="pill">Scripting</span
+              ><span class="pill">Game Dev</span
+              ><span class="pill">Graphics</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://piscript.netlify.app/"
+                target="_blank"
+                class="plink"
+                >↗ Live Demo</a
+              >
+              <a
+                href="https://github.com/rolandbrake"
+                target="_blank"
+                class="plink"
+                >↗ GitHub</a
+              >
+            </div>
+          </div>
+
+          <!-- WEB SPAs -->
+          <div class="project-card">
+            <div class="project-tag">Web Development · React · SPAs</div>
+            <div class="project-name">Single-Page Applications</div>
+            <p class="project-desc">
+              I build production-ready SPAs with React and TypeScript -
+              component libraries, state management, Firebase auth, REST API
+              integration, and responsive UI.this
+              <a
+                href="https://demetri.netlify.app/"
+                target="_blank"
+                class="plink"
+                >website</a
+              >
+              is a live example: a photography portfolio site for a freelancer,
+              built as a full React SPA.
+            </p>
+            <div class="spa-mockup">
+              <img src="assets/SPA.png" alt="photography SPA" />
+            </div>
+            <div class="project-tech">
+              <span class="pill">React</span
+              ><span class="pill">TypeScript</span>
+              <span class="pill">Redux</span><span class="pill">Firebase</span
+              ><span class="pill">Vite</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://demetri.netlify.app/"
+                target="_blank"
+                class="plink"
+                >↗ Website (example)</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-inner">
+        <div class="eyebrow">// 03 - skills</div>
+        <h2 class="section-heading">Technical Stack</h2>
+        <div class="accent-line"></div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <div class="skill-group-name">Compiler Engineering</div>
+            <ul class="skill-list">
+              <li>Recursive-descent parsing</li>
+              <li>Bytecode compilation &amp; opcode design</li>
+              <li>Register-based VM, computed-goto dispatch</li>
+              <li>Call-site inline caches (V8 / LuaJIT style)</li>
+              <li>Mark-and-sweep garbage collection</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Systems &amp; Languages</div>
+            <ul class="skill-list">
+              <li>C - parsers, VMs, memory management</li>
+              <li>Python - scripting, pipelines, tooling</li>
+              <li>JavaScript / TypeScript</li>
+              <li>Java</li>
+              <li>WebAssembly via Emscripten</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Frontend</div>
+            <ul class="skill-list">
+              <li>React.js / Next.js / Vite</li>
+              <li>Redux state management</li>
+              <li>TypeScript - generics, strict typing</li>
+              <li>HTML5 / CSS3 - Flexbox / Grid</li>
+              <li>Responsive &amp; accessible UI</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Backend &amp; Data</div>
+            <ul class="skill-list">
+              <li>Node.js / REST API design</li>
+              <li>MySQL / SQLite / MongoDB</li>
+              <li>Firebase / Firestore</li>
+              <li>Scikit-learn / TensorFlow / Keras</li>
+              <li>Pandas / NumPy</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Graphics &amp; Rendering</div>
+            <ul class="skill-list">
+              <li>Software 3D renderer - depth buffer</li>
+              <li>2D plotting - contour, quiver, streamplot</li>
+              <li>N-dimensional tensor system</li>
+              <li>SDL2 canvas &amp; event system</li>
+              <li>Isometric &amp; orthographic projection</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Tools &amp; Workflow</div>
+            <ul class="skill-list">
+              <li>Git / GitHub - CI workflows</li>
+              <li>Linux / Bash - scripting, automation</li>
+              <li>Emscripten - C to WASM</li>
+              <li>Firebase hosting &amp; serverless</li>
+              <li>LLM-augmented development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-inner contact-inner">
+        <div class="eyebrow">// 04 - contact</div>
+        <h2 class="section-heading">Let's Work Together</h2>
+        <div class="accent-line"></div>
+        <p class="contact-desc">
+          I'm actively looking for roles - remote or on-site. Web development,
+          backend, full-stack, or anything that involves building interesting
+          software. If you have something in mind, I'd like to hear about it.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:rolandbrake@hotmail.com" class="contact-btn"
+            >✉ rolandbrake@hotmail.com</a
+          >
+          <a
+            href="https://github.com/rolandbrake"
+            target="_blank"
+            class="contact-btn"
+            >⌥ GitHub</a
+          >
+          <a href="tel:+9647510391065" class="contact-btn"
+            >✆ +964 751 039 1065</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span class="teal">rb</span>(); - Roland Brake
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
