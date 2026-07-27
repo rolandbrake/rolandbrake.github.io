@@ -122,5 +122,5 @@ if (track && dots.length) {
     track.style.transform = `translateX(-${current * 100}%)`;
     dots.forEach((d, i) => d.classList.toggle("active", i === current));
   }
-  setInterval(() => goTo(current + 1), 3000);
+  setInterval(() => goTo(current + 1), 5000);
 }
