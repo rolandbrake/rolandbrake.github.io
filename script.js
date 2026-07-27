@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
-  // ── Theme: auto by time, with manual toggle ──
+  //  Theme: auto by time, with manual toggle
   let manualOverride = null;
 
   function getAutoDark() {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ── Terminal typing animation ──
+  //  Terminal typing animation
   const lines = [
     {
       t: '<span class="t-prompt">&gt; </span><span class="t-kw">import</span> math, plot, draw',
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ── Scroll fade-in ──
+  //  Scroll fade-in
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
@@ -93,16 +93,27 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-  // ── Active nav link ──
+  //  Active nav link
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-links a");
   window.addEventListener(
     "scroll",
     () => {
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const pageHeight = document.documentElement.scrollHeight;
+      const atBottom = scrollBottom >= pageHeight - 10;
+
       let cur = "";
-      sections.forEach((s) => {
-        if (window.scrollY >= s.offsetTop - 80) cur = s.id;
-      });
+
+      if (atBottom) {
+        // Force the last section active when at the bottom
+        cur = sections[sections.length - 1].id;
+      } else {
+        sections.forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 80) cur = s.id;
+        });
+      }
+
       navLinks.forEach((a) => {
         a.classList.toggle("active", a.getAttribute("href") === "#" + cur);
       });
@@ -111,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-// ── Pi-Script carousel ──
+//  Pi-Script carousel
 const track = document.querySelector(".carousel-track");
 const dots = document.querySelectorAll(".carousel-dot");
 if (track && dots.length) {
